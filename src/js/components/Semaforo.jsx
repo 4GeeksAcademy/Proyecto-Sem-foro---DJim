@@ -40,8 +40,8 @@ export const Semaforo =()=>{
                 <div className={`amarilla ${luzActiva=='amarilla' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('amarilla')}> </div>
                 <div className={`verde ${luzActiva=='verde' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('verde')}> </div>
                 {esVisible && (
-                <div className={`purpura ${luzActiva=='purpura' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor(purpura)}> </div>
-                      )}
+                <div className="purpura"></div>
+                )}
 
                 
 		</div>
@@ -53,7 +53,7 @@ export const Semaforo =()=>{
 
              <button className="btn btn-danger mb-3" onClick={()=>cambiaColor('color')}>Cambiar Color</button>
              
-             <button className="btn btn-secondary" onClick={()=>mostrarPurpura('purpura')}>
+             <button className="btn btn-secondary" onClick={()=>mostrarPurpura()}>
             {esVisible ? 'Ocultar' : 'Mostrar'}
             </button>
     
