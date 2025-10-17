@@ -1,11 +1,155 @@
-/* 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.semaforo {
+    width: 100px;
+    height: 200px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    background-color: #2c3e50;
+    padding: 10px;
+
+
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display : grid;
+    place-items: center;
+    background-color: #2aa5aa
+
+}
+
+.container{
+    display:grid;
+    place-items: center;
+    
+}
+
+.rojo{
+    display:block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0,0.3);
+    position: relative;
+
+}
+
+.rojo::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255,255,255, 0.6);
+    top: 5%;
+}
+
+.amarilla{
+    display:block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0,0.3);
+    position: relative;
+
+}
+
+.amarilla::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255,255,255, 0.6);
+    top: 5%;
+}
+
+.verde{
+    display:block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0,0.3);
+    position: relative;
+
+}
+
+.verde::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255,255,255, 0.6);
+    top: 5%;
+}
+
+.purpura{
+    display:block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0,0.3);
+    position: relative;
+
+}
+
+.purpura::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-right: 4px solid rgb(255,255,255, 0.6);
+    top: 5%;
+}
+
+.palo{
+    width: 8px;
+    height: 280px;
+    background-color: rgb(0,0,0,0.5);
+
+}
+
+.suelo{
+    width: 300px;
+    height: 1px;
+    background-color: rgb(0,0,0,0.5); 
+    box-shadow: 0 0 10px 1px #a5682a; 
+}
+
+.rojo{
+    background-color: #c0392b;
+    box-shadow: 0 0 10px 1px #c0392b;
+}
+
+.amarilla{
+    background-color: yellow;
+    box-shadow: 0 0 10px 1px #b8b518;
+}
+
+.verde{
+    background-color: green;
+    box-shadow: 0 0 10px 1px green;
+
+}
+
+.purpura{
+    background-color: purple;
+    box-shadow: 0 0 10px 1px purple;
+
+}
+
+.luz-prendida{
+    box-shadow: 1px 1px 52px 24px rgba(232, 236, 227, 0.92);
+
+}
