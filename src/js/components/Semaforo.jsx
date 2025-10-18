@@ -5,12 +5,12 @@ export const Semaforo =()=>{
     let [esVisible, setEsVisible ] = useState ('false')
 
 
-    let cambiaColor =(color)=>{
+    let alternarColor =(color)=>{
         setLuzActiva(color)
 
     }
 
-    cambiaColor =(color)=>{
+    let cambiaColor =()=>{
    if (luzActiva == 'rojo'){
     setLuzActiva('amarilla')}
     else if (luzActiva=='amarilla'){
@@ -24,7 +24,7 @@ export const Semaforo =()=>{
         
         }
 
-        cambiaColor 
+  
 
         const mostrarPurpura = () => {
         setEsVisible(!esVisible); 
@@ -42,11 +42,11 @@ export const Semaforo =()=>{
         <div className="container">
         	  <div className="semaforo">
               
-		        <div className={`rojo ${luzActiva=='rojo' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('rojo')}> </div>
-                <div className={`amarilla ${luzActiva=='amarilla' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('amarilla')}> </div>
-                <div className={`verde ${luzActiva=='verde' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('verde')}> </div>
+		        <div className={`rojo ${luzActiva=='rojo' ? "luz-prendida" : ""}`} onClick={()=>alternarColor('rojo')}> </div>
+                <div className={`amarilla ${luzActiva=='amarilla' ? "luz-prendida" : ""}`} onClick={()=>alternarColor('amarilla')}> </div>
+                <div className={`verde ${luzActiva=='verde' ? "luz-prendida" : ""}`} onClick={()=>alternarColor('verde')}> </div>
                 {!esVisible && (
-                 <div className={`purpura ${luzActiva=='purpura' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('purpura')}> </div>
+                 <div className={`purpura ${luzActiva=='purpura' ? "luz-prendida" : ""}`} onClick={()=>alternarColor('purpura')}> </div>
                 )}
 
                 
