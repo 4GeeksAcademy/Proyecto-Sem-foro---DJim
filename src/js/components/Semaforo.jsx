@@ -15,11 +15,16 @@ export const Semaforo =()=>{
     setLuzActiva('amarilla')}
     else if (luzActiva=='amarilla'){
         setLuzActiva('verde')}
-        else if (luzActiva ='verde'){
-            setLuzActiva('rojo')
-        }
+        else if (luzActiva =='verde'){
+            setLuzActiva('purpura')}
+            else if(luzActiva=='purpura'){
+
+             setLuzActiva('rojo')}
+         
         
         }
+
+        cambiaColor 
 
         const mostrarPurpura = () => {
         setEsVisible(!esVisible); 
@@ -36,11 +41,12 @@ export const Semaforo =()=>{
             
         <div className="container">
         	  <div className="semaforo">
+              
 		        <div className={`rojo ${luzActiva=='rojo' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('rojo')}> </div>
                 <div className={`amarilla ${luzActiva=='amarilla' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('amarilla')}> </div>
                 <div className={`verde ${luzActiva=='verde' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('verde')}> </div>
-                {esVisible && (
-                <div className="purpura"></div>
+                {!esVisible && (
+                 <div className={`purpura ${luzActiva=='purpura' ? "luz-prendida" : ""}`} onClick={()=>cambiaColor('purpura')}> </div>
                 )}
 
                 
@@ -54,7 +60,7 @@ export const Semaforo =()=>{
              <button className="btn btn-danger mb-3" onClick={()=>cambiaColor('color')}>Cambiar Color</button>
              
              <button className="btn btn-secondary" onClick={()=>mostrarPurpura()}>
-            {esVisible ? 'Ocultar' : 'Mostrar'}
+            {esVisible ? 'Mostrar' : 'Ocultar'}
             </button>
     
     
